@@ -6,4 +6,4 @@ COPY ./server /home/server
 EXPOSE 8030
 WORKDIR /home/server
 RUN npm install
-CMD npm start
+CMD nginx && npm start
