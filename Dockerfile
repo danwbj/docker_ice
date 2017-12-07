@@ -2,6 +2,8 @@ FROM dandanwu/nginx_node8
 MAINTAINER  dandanwu <danwbj@163.com> 
 #拷贝大屏端静态资源
 COPY ./screen/dist /home/screen
+#拷贝手机端静态资源
+COPY ./mobile/dist /home/mobile
 #覆盖nginx配置
 COPY nginx/nginx.conf /etc/nginx/
 COPY nginx/default.conf /etc/nginx/conf.d/
